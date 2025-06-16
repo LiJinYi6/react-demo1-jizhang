@@ -1,4 +1,13 @@
 {
-    "name": "Test Data",
-    "version": "1.0.0"
+    "billList":[
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "helo"
+        },{
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane.smith@example.com"
+        }
+    ]
 }
