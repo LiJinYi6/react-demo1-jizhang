@@ -16,7 +16,6 @@ const billStore = createSlice({
 export const asyncSetBillList = ()=>{
     return async (dispatch)=>{
         const response = await axios.get('http://localhost:3001/billList');
-        console.log(response)
         dispatch(billStore.actions.setBillList(response.data));
     }
 }
