@@ -1,12 +1,8 @@
 import {
-  Route,
-  Switch,
   Outlet,
   useNavigate,
   useLocation,
-  MemoryRouter as Router,
 } from 'react-router-dom'
-import { Button } from "antd-mobile";
 import './index.scss'
 import { BillOutline, CalculatorOutline, ReceiptOutline } from 'antd-mobile-icons';
 import { useDispatch } from "react-redux";
