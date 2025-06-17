@@ -1,6 +1,7 @@
 .layout{
+    background-color:#F2F4F7 ;
     .center{
-        position: fixed;
+        // position: fixed;
         width: 100%;
         bottom: 50px;
         top:0px;
@@ -11,5 +12,6 @@
         bottom: 0;
         height: 50px;
         width: 100%;
+        background-color: white;
     }
 }

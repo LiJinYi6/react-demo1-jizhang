@@ -4,6 +4,7 @@ import { DatePicker } from 'antd-mobile';
 import { DownOutline, UpOutline } from 'antd-mobile-icons';
 import { asyncSetBillList } from "@/store/modules/billStore";
 import './index.scss';
+import BillItem from "./components/BillItme";
 import dayjs from "dayjs";
 import _, { set } from 'lodash'
 import { useDispatch, useSelector } from "react-redux";
@@ -21,12 +22,16 @@ function Month() {
   const currentBillList = useMemo(() => {
     return monthGroup[currentMonth] || [];
   }, [currentMonth,monthGroup])
+  const dayGroup = useMemo(() => {
+      const groupDatas = _.groupBy(currentBillList, (item) => dayjs(item.date).format('YYYY-MM-DD'));
+      console.log('日分组数据:', groupDatas);
+      const keys = Object.keys(groupDatas);
+      return {keys, groupDatas};
+  },[currentBillList])
   const moneyResult = useMemo(() => {
-    console.log('计算当前月的收支', currentBillList)
     const incomeTotal = currentBillList.filter(item => item.type === 'income').reduce((a,c) => {return a+c.money},0)
     const payTotal = currentBillList.filter(item => item.type === 'pay').reduce((a,c) => {return a+c.money},0)
     const total = incomeTotal + payTotal
-    console.log('计算结果', incomeTotal, payTotal, total   )
     return { incomeTotal, payTotal, total }
   },[currentBillList])
 
@@ -53,6 +58,11 @@ function Month() {
                 <span className='value'>{moneyResult.total} </span>
             </div>
         </div>
+      </div>
+      <div className = 'bill-list'>
+        {dayGroup.keys.map((key) => {
+            return <BillItem key={key} time={key} dayBillList={dayGroup.groupDatas[key]} />
+        })}
       </div>
 
 

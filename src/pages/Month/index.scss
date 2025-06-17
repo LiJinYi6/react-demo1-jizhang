@@ -4,13 +4,13 @@
     box-sizing: border-box;
     padding:0px 10px;
     .top-card{
+        background-image: url('../../assets/topCardBkg.jpg');
         font-size:16px;
         font-weight: 600;
         box-sizing: border-box;
         height:120px;
         width: 100%;
         padding: 20px;
-        background-color: skyblue;
         border-radius: 5px;
         border: 1px solid #ccc;
         display: flex;
@@ -20,7 +20,49 @@
         .time-ctl{
             margin-bottom: 30px;
         }
-        .total{
+    }
+    .bill-list{
+        margin-top: 10px;
+        width: 100%;
+        .bill-item{
+            margin-top: 10px;
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            .total-ctn{
+                width: 100%;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+            .title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .time{
+                    font-size: 16px;
+                    color: black;
+                    font-weight: 400;
+                }
+                margin-bottom: 10px;
+            }
+            .detail-item{
+                margin-top: 10px;;
+                width: 100%;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .value{
+                    color:red;
+                }
+            }
+        }
+        
+    }
+    .total{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -29,7 +71,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                .bill-label{
+                    color: red;
+                }
             }
         }
-    }
 }

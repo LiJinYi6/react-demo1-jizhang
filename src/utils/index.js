@@ -42,5 +42,28 @@ function generateBillList() {
   // 按时间排序
   return bills.sort((a, b) => new Date(a.date) - new Date(b.date));
 }
+const typeMap = {
+  // 支出类型
+  Shopping: { label: '购物', icon: 'expense' },
+  Food: { label: '餐饮', icon: 'expense' },
+  Transport: { label: '交通', icon: 'expense' },
+  Accommodation: { label: '住宿', icon: 'expense' },
+  Entertainment: { label: '娱乐', icon: 'expense' },
+  Medical: { label: '医疗', icon: 'expense' },
+  Education: { label: '教育', icon: 'expense' },
+  Daily: { label: '日用', icon: 'expense' },
 
+  // 收入类型
+  Salary: { label: '工资', icon: 'income' },
+  'Part-time': { label: '兼职', icon: 'income' },
+  Investment: { label: '理财', icon: 'income' },
+  Bonus: { label: '奖金', icon: 'income' },
+  'Red Packet': { label: '红包', icon: 'income' },
+
+  // 账单类型
+  income: '收入',
+  expense: '支出'
+};
+
+export {typeMap}
 export const billList = generateBillList();
