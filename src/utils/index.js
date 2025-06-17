@@ -1,3 +1,17 @@
+import { ReactComponent as ShoppingIcon } from '@/assets/icons/gouwu.svg';
+import { ReactComponent as FoodIcon } from '@/assets/icons/canyin.svg';
+import { ReactComponent as TransportIcon } from '@/assets/icons/jiaotongfei.svg';
+import { ReactComponent as AccommodationIcon } from '@/assets/icons/zhusu.svg'; 
+import { ReactComponent as EntertainmentIcon } from '@/assets/icons/yule.svg';
+import { ReactComponent as MedicalIcon } from '@/assets/icons/yiliaofuwu.svg';  
+import { ReactComponent as EducationIcon } from '@/assets/icons/jiaoyu.svg';
+import { ReactComponent as DailyIcon } from '@/assets/icons/riyongpin.svg';
+import { ReactComponent as SalaryIcon } from '@/assets/icons/salary.svg';
+import { ReactComponent as PartTimeIcon } from '@/assets/icons/qujianzhi.svg';
+import { ReactComponent as InvestmentIcon } from '@/assets/icons/licai.svg';
+import { ReactComponent as BonusIcon } from '@/assets/icons/wode-wodejiangjin.svg';
+import { ReactComponent as RedPacketIcon } from '@/assets/icons/hongbao.svg';
+
 const billTypes = {
   income: ['Salary', 'Part-time', 'Investment', 'Bonus', 'Red Packet'],
   pay: ['Shopping', 'Food', 'Transport', 'Accommodation', 'Entertainment', 'Medical', 'Education', 'Daily']
@@ -44,21 +58,21 @@ function generateBillList() {
 }
 const typeMap = {
   // 支出类型
-  Shopping: { label: '购物', icon: 'expense' },
-  Food: { label: '餐饮', icon: 'expense' },
-  Transport: { label: '交通', icon: 'expense' },
-  Accommodation: { label: '住宿', icon: 'expense' },
-  Entertainment: { label: '娱乐', icon: 'expense' },
-  Medical: { label: '医疗', icon: 'expense' },
-  Education: { label: '教育', icon: 'expense' },
-  Daily: { label: '日用', icon: 'expense' },
+  Shopping: { label: '购物', icon: <ShoppingIcon /> },
+  Food: { label: '餐饮', icon: <FoodIcon /> },
+  Transport: { label: '交通', icon: <TransportIcon /> },
+  Accommodation: { label: '住宿', icon: <AccommodationIcon /> },
+  Entertainment: { label: '娱乐', icon: <EntertainmentIcon /> },
+  Medical: { label: '医疗', icon: <MedicalIcon /> },
+  Education: { label: '教育', icon: <EducationIcon /> },
+  Daily: { label: '日用', icon: <DailyIcon /> },
 
   // 收入类型
-  Salary: { label: '工资', icon: 'income' },
-  'Part-time': { label: '兼职', icon: 'income' },
-  Investment: { label: '理财', icon: 'income' },
-  Bonus: { label: '奖金', icon: 'income' },
-  'Red Packet': { label: '红包', icon: 'income' },
+  Salary: { label: '工资', icon: <SalaryIcon /> },
+  'Part-time': { label: '兼职', icon: <PartTimeIcon /> },
+  Investment: { label: '理财', icon: <InvestmentIcon /> },
+  Bonus: { label: '奖金', icon: <BonusIcon /> },
+  'Red Packet': { label: '红包', icon: <RedPacketIcon /> },
 
   // 账单类型
   income: '收入',

@@ -39,7 +39,7 @@ function BillItem({time,dayBillList}){
                     isShowTime && dayBillList.map(item => {
                         return (
                             <div key={item.id} className="detail-item">
-                                <span className="label">{typeMap[item.payFor]}</span>
+                                <span className="label">{typeMap[item.payFor].icon}<span> </span>{typeMap[item.payFor].label}</span>
                                 <span className="value">{item.money}</span>
                             </div>
                         )
