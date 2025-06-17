@@ -11,6 +11,7 @@ import { ReactComponent as PartTimeIcon } from '@/assets/icons/qujianzhi.svg';
 import { ReactComponent as InvestmentIcon } from '@/assets/icons/licai.svg';
 import { ReactComponent as BonusIcon } from '@/assets/icons/wode-wodejiangjin.svg';
 import { ReactComponent as RedPacketIcon } from '@/assets/icons/hongbao.svg';
+import { type } from '@testing-library/user-event/dist/type';
 
 const billTypes = {
   income: ['Salary', 'Part-time', 'Investment', 'Bonus', 'Red Packet'],
@@ -58,21 +59,21 @@ function generateBillList() {
 }
 const typeMap = {
   // 支出类型
-  Shopping: { label: '购物', icon: <ShoppingIcon /> },
-  Food: { label: '餐饮', icon: <FoodIcon /> },
-  Transport: { label: '交通', icon: <TransportIcon /> },
-  Accommodation: { label: '住宿', icon: <AccommodationIcon /> },
-  Entertainment: { label: '娱乐', icon: <EntertainmentIcon /> },
-  Medical: { label: '医疗', icon: <MedicalIcon /> },
-  Education: { label: '教育', icon: <EducationIcon /> },
-  Daily: { label: '日用', icon: <DailyIcon /> },
+  Shopping: { label: '购物', icon: <ShoppingIcon />, type:'pay' },
+  Food: { label: '餐饮', icon: <FoodIcon />, type:'pay' },
+  Transport: { label: '交通', icon: <TransportIcon />, type:'pay' },
+  Accommodation: { label: '住宿', icon: <AccommodationIcon />,type:'pay' },
+  Entertainment: { label: '娱乐', icon: <EntertainmentIcon />,type:'pay' },
+  Medical: { label: '医疗', icon: <MedicalIcon />,type:'pay' },
+  Education: { label: '教育', icon: <EducationIcon /> ,type:'pay'},
+  Daily: { label: '日用', icon: <DailyIcon />,type:'pay' },
 
   // 收入类型
-  Salary: { label: '工资', icon: <SalaryIcon /> },
-  'Part-time': { label: '兼职', icon: <PartTimeIcon /> },
-  Investment: { label: '理财', icon: <InvestmentIcon /> },
-  Bonus: { label: '奖金', icon: <BonusIcon /> },
-  'Red Packet': { label: '红包', icon: <RedPacketIcon /> },
+  Salary: { label: '工资', icon: <SalaryIcon />,type:'income' },
+  'Part-time': { label: '兼职', icon: <PartTimeIcon /> ,type:'income'},
+  Investment: { label: '理财', icon: <InvestmentIcon />,type:'income' },
+  Bonus: { label: '奖金', icon: <BonusIcon />,type:'income' },
+  'Red Packet': { label: '红包', icon: <RedPacketIcon />,type:'income' },
 
   // 账单类型
   income: '收入',

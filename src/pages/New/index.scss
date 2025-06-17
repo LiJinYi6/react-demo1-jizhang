@@ -1,0 +1,84 @@
+.new{
+    width: 100%;
+    
+    .top-card{
+        background-color: rgb(224, 243, 227);
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .btn-ctn{
+            margin:20px 0px;
+        }
+        .input-ctn{
+            display: flex;
+            align-items: center;
+            width: 80%;
+            background-color: white;
+            border-radius: 5px;
+            margin:50px 0px;
+            .input{
+                flex:auto;
+            }
+            .calendar-icon{
+                background-color:rgb(224, 243, 227) ;
+                border-radius: 5px;
+                flex: none;
+                margin-left: 2px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                cursor: pointer;
+                svg {
+                  display: block;
+                  font-size: 16px;
+                }
+            }
+            
+        }
+    }
+    .bottom-card{
+        font-size: 24px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        display: grid;
+        padding: 50px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-gap: 50px;
+        transition: all 1s;
+        .item{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:center;
+            cursor: pointer;
+        }
+        .item:hover{
+            border-radius: 5px;
+            border:1px solid rgb(224, 243, 227);
+            background-color: rgb(224, 243, 227);
+            padding: 5px;
+        }
+        .item-active{
+            border-radius: 5px;
+            border:1px solid rgb(224, 243, 227);
+            background-color: rgb(224, 243, 227);
+            padding: 5px;
+        }
+        .icon{
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .save-ctn
+    {
+        width: 70%;
+        left:15%;
+        height: 30px;
+        margin-top: 100px;
+    }
+    .save-ctn:hover{
+        background-color:rgb(105, 174, 120) ;
+    }
+}
