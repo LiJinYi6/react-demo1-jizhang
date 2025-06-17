@@ -1,12 +1,14 @@
 .month{
     --height:45px;
+    width: 100%;
+    box-sizing: border-box;
+    padding:0px 10px;
     .top-card{
         font-size:16px;
         font-weight: 600;
         box-sizing: border-box;
         height:120px;
         width: 100%;
-        margin: 5px;
         padding: 20px;
         background-color: skyblue;
         border-radius: 5px;
